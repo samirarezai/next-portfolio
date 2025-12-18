@@ -6,9 +6,14 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-keygen: var(--font-keygen);
+  --font-silkscreen: var(--font-silkscreen);
   --color-accent: var(--accent);
   --color-primary: var(--primary);
   --color-pink: var(--pink);
+}
+
+.font-silkscreen {
+  font-family: var(--font-silkscreen), cursive;
 }
 
 :root {
@@ -42,10 +47,14 @@ html {
 
 body {
   color: var(--foreground) !important;
-  font-family: var(--font-sans), system-ui, sans-serif;
+  font-family: var(--font-keygen), var(--font-sans), system-ui, sans-serif;
   overflow-x: hidden;
   margin: 0;
   padding: 0;
+}
+
+.font-keygen {
+  font-family: var(--font-keygen), sans-serif;
 }
 
 .checkered-grid {

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Silkscreen } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 
@@ -11,6 +11,12 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const silkscreen = Silkscreen({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-silkscreen",
 });
 
 const keygen = localFont({
@@ -31,7 +37,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${keygen.variable} antialiased font-sans`}
+        className={`${geistSans.variable} ${geistMono.variable} ${keygen.variable} ${silkscreen.variable} ${silkscreen.className} antialiased`}
       >
         {children}
       </body>

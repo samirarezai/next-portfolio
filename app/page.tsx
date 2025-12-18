@@ -58,7 +58,7 @@ export default function Home() {
             <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-pink font-keygen">REZAYI</span>
           </div>
         </div>
-        <div className="hidden md:flex gap-12 text-[10px] font-black uppercase tracking-[0.3em]">
+        <div className="hidden md:flex gap-12 text-[10px] font-black uppercase tracking-[0.3em] font-silkscreen">
           <a href="#work" className="hover:text-pink transition-colors relative py-2 group">
             Work
             <span className="absolute bottom-0 left-0 w-full h-1 bg-pink scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
@@ -89,15 +89,15 @@ export default function Home() {
         <div className="z-10 flex flex-col items-center max-w-6xl w-full">
           <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="inline-block bg-pink text-background px-4 py-1 text-[10px] font-black uppercase tracking-[0.3em] mb-8 animate-float font-keygen">
+              <div className="inline-block bg-pink text-background px-4 py-1 text-[10px] font-black uppercase tracking-[0.3em] mb-8 animate-float font-silkscreen">
                 Full-Stack Developer
               </div>
               <h1 className="text-8xl md:text-[10vw] font-black leading-[0.8] tracking-tighter uppercase text-primary mb-8 font-keygen">
                 SAMIRA <br />
-                <span className="text-pink">REZAI</span> <br />
+                <span className="text-pink">REZAYI</span> <br />
 
               </h1>
-              <p className="max-w-md text-lg font-bold leading-relaxed opacity-70 border-l-4 border-primary pl-6">
+              <p className="max-w-md text-lg font-bold leading-relaxed opacity-70 border-l-4 border-primary pl-6 font-silkscreen">
                 7+ years of crafting digital robots and high-performance web experiences.
               </p>
             </div>
@@ -138,18 +138,18 @@ export default function Home() {
 
       {/* Featured Work */}
       <section id="work" className="py-32 px-6 max-w-7xl mx-auto relative">
-        <div className="absolute -left-20 top-20 text-9xl font-black text-primary opacity-5 rotate-90 select-none">
+        <div className="absolute -left-20 top-20 text-9xl font-black text-primary opacity-5 rotate-90 select-none font-keygen">
           PROJECTS
         </div>
 
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-24 gap-8">
           <div>
-            <span className="text-pink font-black text-xl font-keygen">[ 03 ]</span>
+            <span className="text-pink font-black text-xl font-silkscreen">[ 03 ]</span>
             <h2 className="text-7xl md:text-9xl font-black uppercase tracking-tighter text-primary font-keygen">
               WORK<span className="text-pink">.</span>
             </h2>
           </div>
-          <div className="text-right font-black uppercase tracking-widest text-xs opacity-40">
+          <div className="text-right font-black font-silkscreen uppercase tracking-widest text-xs opacity-40">
             Selected Repositories
           </div>
         </div>
@@ -167,13 +167,13 @@ export default function Home() {
                 #{project.id}
               </div>
               <div className="mb-12">
-                <p className="text-[10px] font-black uppercase tracking-widest text-pink group-hover:text-background/80 transition-colors mb-4">
+                <p className="text-[10px] font-black uppercase tracking-widest text-pink group-hover:text-background/80 transition-colors mb-4 font-silkscreen">
                   {project.tag}
                 </p>
                 <h3 className="text-3xl font-black uppercase tracking-tighter group-hover:text-background transition-colors mb-6">
                   {project.name}
                 </h3>
-                <p className="text-sm font-bold leading-relaxed opacity-60 group-hover:text-background/60 transition-colors">
+                <p className="text-sm font-bold leading-relaxed opacity-60 group-hover:text-background/60 transition-colors font-silkscreen">
                   {project.description}
                 </p>
               </div>
@@ -196,17 +196,17 @@ export default function Home() {
               <span className="text-pink">ROBOT</span> <br />
               BRAIN
             </h2>
-            <p className="text-2xl font-bold leading-relaxed mb-12 border-l-8 border-pink pl-8">
+            <p className="text-2xl font-bold leading-relaxed mb-12 border-l-8 border-pink pl-8 font-silkscreen">
               &quot;Code is like humor. When you have to explain it, it&apos;s bad.&quot;
             </p>
             <div className="grid grid-cols-2 gap-8">
               <div>
-                <h4 className="font-black uppercase tracking-widest text-[10px] mb-2 text-pink">Core Location</h4>
-                <p className="text-lg font-bold">Tehran, Iran / Remote</p>
+                <h4 className="font-black uppercase tracking-widest text-[10px] mb-2 text-pink font-silkscreen">Core Location</h4>
+                <p className="text-lg font-bold font-silkscreen">Tehran, Iran / Remote</p>
               </div>
               <div>
-                <h4 className="font-black uppercase tracking-widest text-[10px] mb-2 text-pink">Uptime</h4>
-                <p className="text-lg font-bold">7+ Years Exp</p>
+                <h4 className="font-black uppercase tracking-widest text-[10px] mb-2 text-pink font-silkscreen">Uptime</h4>
+                <p className="text-lg font-bold font-silkscreen">7+ Years Exp</p>
               </div>
             </div>
           </div>
@@ -221,7 +221,7 @@ export default function Home() {
             </div>
             <div className="flex flex-col justify-center gap-6">
               {['Languages', 'Frameworks', 'Tools'].map((cat, idx) => (
-                <div key={idx} className="border-b-2 border-background/20 pb-4">
+                <div key={idx} className="border-b-2 border-background/20 pb-4 font-silkscreen">
                   <h4 className="font-black uppercase text-[10px] text-pink mb-1">{cat}</h4>
                   <div className="h-2 w-full bg-background/10 mt-2">
                     <div className="h-full bg-pink w-[80%]" />
@@ -240,7 +240,7 @@ export default function Home() {
         </div>
 
         <div className="max-w-4xl mx-auto relative z-10">
-          <p className="text-xs font-black uppercase tracking-[0.5em] text-pink mb-8 font-keygen">Ready for deployment</p>
+          <p className="text-xs font-black uppercase tracking-[0.5em] text-pink mb-8 font-silkscreen">Ready for deployment</p>
           <a href="mailto:samirarezai1996@gmail.com" className="text-4xl md:text-7xl font-black text-primary hover:text-pink transition-colors break-all font-keygen">
             SAMIRAREZAI1996@GMAIL.COM
           </a>
@@ -248,16 +248,16 @@ export default function Home() {
           <div className="mt-24 flex flex-col md:flex-row justify-between items-center gap-12 pt-12 border-t-4 border-primary">
             <div className="flex gap-4">
               {['LI', 'GH', 'TW'].map(s => (
-                <button key={s} className="w-12 h-12 border-4 border-primary flex items-center justify-center font-black text-xs hover:bg-pink hover:border-pink hover:text-background transition-all pixel-shadow-pink">
+                <button key={s} className="w-12 h-12 border-4 border-primary flex items-center justify-center font-black text-xs hover:bg-pink hover:border-pink hover:text-background transition-all pixel-shadow-pink font-silkscreen">
                   {s}
                 </button>
               ))}
             </div>
-            <p className="text-[10px] font-black uppercase tracking-widest opacity-40">
+            <p className="text-[10px] font-black uppercase tracking-widest opacity-40 font-silkscreen">
               © 2025 SAMIRA REZAIE — SYSTEM: OPTIMIZED
             </p>
             <div className="flex items-center gap-4">
-              <span className="text-[10px] font-black uppercase tracking-widest text-primary">JAPAN</span>
+              <span className="text-[10px] font-black uppercase tracking-widest text-primary font-silkscreen">JAPAN</span>
               <span className="text-2xl">🇯🇵</span>
             </div>
           </div>
