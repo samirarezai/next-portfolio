@@ -37,7 +37,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen text-foreground font-mono">
+    <div className="min-h-screen bg-background text-foreground transition-colors duration-500 font-mono">
       {/* Robot Dot Grid Overlay */}
       <div className="fixed inset-0 robot-grid pointer-events-none opacity-10" />
       <div className="fixed inset-0 checkered-grid pointer-events-none opacity-5" />
@@ -112,6 +112,17 @@ export default function Home() {
                 <div className="absolute -top-8 -right-8 w-16 h-16 bg-pink flex items-center justify-center text-4xl font-bold text-background pixel-shadow">
                   ★
                 </div>
+              </div>
+
+              {/* Pinki Creature */}
+              <div className="absolute -bottom-44 -right-40 w-32 h-32 z-20 animate-float pointer-events-none" style={{ animationDelay: '1s' }}>
+                <Image
+                  src="/pinki.png"
+                  alt="Pinki Creature"
+                  width={64}
+                  height={64}
+                  className="object-contain drop-shadow-[0_0_15px_rgba(254,52,218,0.5)]"
+                />
               </div>
             </div>
           </div>
