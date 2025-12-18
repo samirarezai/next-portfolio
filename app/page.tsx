@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -36,7 +37,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-background text-foreground transition-colors duration-500 font-mono">
+    <div className="min-h-screen text-foreground font-mono">
       {/* Robot Dot Grid Overlay */}
       <div className="fixed inset-0 robot-grid pointer-events-none opacity-10" />
       <div className="fixed inset-0 checkered-grid pointer-events-none opacity-5" />
@@ -53,8 +54,8 @@ export default function Home() {
             </div>
           </div>
           <div className="flex flex-col leading-none">
-            <span className="text-xl font-black tracking-tighter uppercase text-primary">SAMIRA</span>
-            <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-pink">REZAYI</span>
+            <span className="text-xl font-black tracking-tighter uppercase text-primary font-keygen">SAMIRA</span>
+            <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-pink font-keygen">REZAYI</span>
           </div>
         </div>
         <div className="hidden md:flex gap-12 text-[10px] font-black uppercase tracking-[0.3em]">
@@ -88,13 +89,13 @@ export default function Home() {
         <div className="z-10 flex flex-col items-center max-w-6xl w-full">
           <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="inline-block bg-pink text-background px-4 py-1 text-[10px] font-black uppercase tracking-[0.3em] mb-8 animate-float">
+              <div className="inline-block bg-pink text-background px-4 py-1 text-[10px] font-black uppercase tracking-[0.3em] mb-8 animate-float font-keygen">
                 Full-Stack Developer
               </div>
-              <h1 className="text-8xl md:text-[10vw] font-black leading-[0.8] tracking-tighter uppercase text-primary mb-8">
-                MEKA <br />
-                <span className="text-pink">PIXEL</span> <br />
-                DEV
+              <h1 className="text-8xl md:text-[10vw] font-black leading-[0.8] tracking-tighter uppercase text-primary mb-8 font-keygen">
+                SAMIRA <br />
+                <span className="text-pink">REZAI</span> <br />
+
               </h1>
               <p className="max-w-md text-lg font-bold leading-relaxed opacity-70 border-l-4 border-primary pl-6">
                 7+ years of crafting digital robots and high-performance web experiences.
@@ -132,8 +133,8 @@ export default function Home() {
 
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-24 gap-8">
           <div>
-            <span className="text-pink font-black text-xl">[ 03 ]</span>
-            <h2 className="text-7xl md:text-9xl font-black uppercase tracking-tighter text-primary">
+            <span className="text-pink font-black text-xl font-keygen">[ 03 ]</span>
+            <h2 className="text-7xl md:text-9xl font-black uppercase tracking-tighter text-primary font-keygen">
               WORK<span className="text-pink">.</span>
             </h2>
           </div>
@@ -179,7 +180,7 @@ export default function Home() {
 
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 items-center relative z-10">
           <div>
-            <h2 className="text-7xl md:text-8xl font-black uppercase tracking-tighter leading-[0.85] mb-12">
+            <h2 className="text-7xl md:text-8xl font-black uppercase tracking-tighter leading-[0.85] mb-12 font-keygen">
               THE <br />
               <span className="text-pink">ROBOT</span> <br />
               BRAIN
@@ -223,14 +224,14 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="py-32 px-6 text-center relative">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 text-[15vw] font-black opacity-[0.02] pointer-events-none uppercase tracking-tighter">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 text-[15vw] font-black opacity-[0.02] pointer-events-none uppercase tracking-tighter font-keygen">
           CONTACT
         </div>
 
         <div className="max-w-4xl mx-auto relative z-10">
-          <p className="text-xs font-black uppercase tracking-[0.5em] text-pink mb-8">Ready for deployment</p>
-          <a href="mailto:samirarezai1996@gmail.com" className="text-4xl md:text-7xl font-black text-primary hover:text-pink transition-colors break-all">
-            WORK@SAMIRAREZAI.COM
+          <p className="text-xs font-black uppercase tracking-[0.5em] text-pink mb-8 font-keygen">Ready for deployment</p>
+          <a href="mailto:samirarezai1996@gmail.com" className="text-4xl md:text-7xl font-black text-primary hover:text-pink transition-colors break-all font-keygen">
+            SAMIRAREZAI1996@GMAIL.COM
           </a>
 
           <div className="mt-24 flex flex-col md:flex-row justify-between items-center gap-12 pt-12 border-t-4 border-primary">

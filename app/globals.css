@@ -5,34 +5,47 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-keygen: var(--font-keygen);
   --color-accent: var(--accent);
   --color-primary: var(--primary);
   --color-pink: var(--pink);
 }
 
 :root {
-  --background: #fef8db;
-  --foreground: #040921;
+  --background: #fecbe1 !important;
+  --foreground: #01014a !important;
   --accent: #0625ff;
   --primary: #4331bb;
   --pink: #fe34da;
 }
 
+/* Force Light Mode specifically if Dark Mode is overriding */
+[data-theme='light'],
+:root:not([data-theme='dark']) {
+  --background: #fecbe1 !important;
+  --foreground: #01014a !important;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #040921;
-    --foreground: #fef8db;
+    --background: #01014a !important;
+    --foreground: #fecbe1 !important;
     --accent: #0625ff;
     --primary: #4331bb;
     --pink: #fe34da;
   }
 }
 
+html {
+  background-color: var(--background) !important;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
+  color: var(--foreground) !important;
   font-family: var(--font-sans), system-ui, sans-serif;
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 .checkered-grid {
