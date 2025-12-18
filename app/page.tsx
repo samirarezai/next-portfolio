@@ -37,10 +37,21 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-background text-foreground transition-colors duration-500 font-mono">
-      {/* Robot Dot Grid Overlay */}
-      <div className="fixed inset-0 robot-grid pointer-events-none opacity-10" />
-      <div className="fixed inset-0 checkered-grid pointer-events-none opacity-5" />
+    <div className="min-h-screen text-foreground transition-colors duration-500 font-mono">
+      {/* Background Image Overlay - Lowest Layer */}
+      <div className="fixed inset-0 pointer-events-none -z-20 bg-background">
+        <Image
+          src="/image.png"
+          alt="Background"
+          fill
+          priority
+          className="object-cover opacity-10 mix-blend-multiply"
+        />
+      </div>
+      {/* Robot Dot Grid Overlay - Above Image */}
+      <div className="fixed inset-0 robot-grid pointer-events-none opacity-10 -z-10" />
+      {/* Checkered Grid Overlay - Above Dot Grid */}
+      <div className="fixed inset-0 checkered-grid pointer-events-none opacity-5 -z-10" />
 
       {/* Navigation */}
       <nav className={`fixed top-0 left-0 w-full z-50 p-6 flex justify-between items-center transition-all duration-300 ${isScrolled ? "backdrop-blur-md bg-background/80 py-4 border-b-4 border-primary" : ""}`}>
