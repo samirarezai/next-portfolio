@@ -5,12 +5,10 @@ import Image from "next/image";
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
-      setScrollY(window.scrollY);
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
@@ -42,19 +40,6 @@ export default function Home() {
 
   return (
     <div className="min-h-screen text-foreground transition-colors duration-500 font-mono">
-      {/* Background Image Overlay - Lowest Layer */}
-      <div className="fixed inset-0 pointer-events-none -z-20 bg-background overflow-hidden">
-        <Image
-          src="/bgimage.png"
-          alt="Background"
-          fill
-          priority
-          className="object-cover opacity-10 mix-blend-multiply transition-transform duration-150 ease-out"
-          style={{
-            transform: `scale(${1 + scrollY * 0.0003})`,
-          }}
-        />
-      </div>
       {/* Robot Dot Grid Overlay - Above Image */}
       <div className="fixed inset-0 robot-grid pointer-events-none opacity-10 -z-10" />
       {/* Checkered Grid Overlay - Above Dot Grid */}
